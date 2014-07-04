@@ -27,4 +27,4 @@ stdout_logfile = ./log/{{project}}_server.log
 [program:{{project}}_client]
 command = gulp watch
 stdout_logfile = ./log/{{project}}_client.log
-directory = ./test_proj/client-src
+directory = ./{{project}}/client-src

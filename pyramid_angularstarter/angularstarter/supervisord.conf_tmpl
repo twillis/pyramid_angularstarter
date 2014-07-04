@@ -1,0 +1,30 @@
+[supervisord]
+logfile=./log/supervisord.log ; (main log file;default $CWD/supervisord.log)
+logfile_maxbytes=50MB        ; (max main logfile bytes b4 rotation;default 50MB)
+logfile_backups=10           ; (num of main logfile rotation backups;default 10)
+loglevel=info                ; (log level;default info; others: debug,warn,trace)
+pidfile=supervisord.pid ; (supervisord pidfile;default supervisord.pid)
+nodaemon=false               ; (start in foreground if true;default false)
+minfds=1024                  ; (min. avail startup file descriptors;default 1024)
+minprocs=200                 ; (min. avail process descriptors;default 200)
+
+[inet_http_server]
+port = 5001
+
+[rpcinterface:supervisor]
+supervisor.rpcinterface_factory = supervisor.rpcinterface:make_main_rpcinterface
+
+[supervisorctl]
+serverurl=http://127.0.0.1:5001
+prompt={{project}}-supervisor         ; cmd line prompt (default "supervisor")
+history_file = .sc_history      ; use readline history if available
+
+[program:{{project}}_server]
+command = pserve development.ini --reload
+stdout_logfile = ./log/{{project}}_server.log
+
+
+[program:{{project}}_client]
+command = gulp watch
+stdout_logfile = ./log/{{project}}_client.log
+directory = ./test_proj/client-src

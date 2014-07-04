@@ -32,8 +32,8 @@ Note the additional scaffold "angularjs", running pcreate with this
 scaffold will generate a project skeleton with the following
 "features".
 
-* pyramid project setup with jinja2, sqlalchemy a javascript
-* project under <project_name>/client-src setup with bower, gulp, coffeescript and sass
+* pyramid project setup with jinja2, sqlalchemy 
+* a javascript project under <project_name>/client-src setup with bower, gulp, coffeescript and sass
 * a skeleton angularjs project + foundation css
 * a supervisor config to run both pserve and gulp watch
 

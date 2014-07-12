@@ -14,7 +14,7 @@ with open(os.path.join(here, 'CHANGES.md')) as f:
 requires = ['pyramid']
 
 setup(name='pyramid_angularstarter',
-      version='0.0',
+      version='0.1',
       description='pyramid_angularstarter',
       long_description=README + '\n\n' + CHANGES,
       classifiers=[

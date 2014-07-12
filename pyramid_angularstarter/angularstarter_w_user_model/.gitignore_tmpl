@@ -1,0 +1,14 @@
+*~
+log/
+/supervisord.pid
+/*.egg-info/
+*.pyc
+/{{package}}/client-src/bower_components
+/{{package}}/client-src/node_modules
+/**/*/.sass-cache
+/db.sqlite
+/production.ini
+/supervisord.conf
+/{{package}}/static/scripts/**/*
+/{{package}}/static/styles/**/*
+/secret_settings.ini

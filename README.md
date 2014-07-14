@@ -45,4 +45,4 @@ additionally, angular_js_w_user provides a user model and views for the followin
 
 database migrations via alembic are already configured with this template as well.
 
-Hopefully everything else is self explanatory. :)
+Hopefully everything else is self explanatory. But if not, maybe reading [this] (https://github.com/twillis/pyramid_angularstarter/wiki/Example-usage-of-pyramid_angularstarter) will help:)
